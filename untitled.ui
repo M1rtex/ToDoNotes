@@ -193,7 +193,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QListView" name="file_list_view">
+                  <widget class="QListWidget" name="file_list_view">
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
@@ -321,7 +321,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QListView" name="teg_list_view">
+                  <widget class="QListWidget" name="teg_list_view">
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>

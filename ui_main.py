@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'untitledzCnTww.ui'
+##
+## Created by: Qt User Interface Compiler version 5.14.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
 from PyQt5.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
     QRect, QSize, QUrl, Qt)
@@ -81,7 +90,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.label_2)
 
-        self.file_list_view = QListView(self.frame_2)
+        self.file_list_view = QListWidget(self.frame_2)
         self.file_list_view.setObjectName(u"file_list_view")
         self.file_list_view.setMaximumSize(QSize(16777215, 180))
 
@@ -96,20 +105,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_3 = QPushButton(self.frame_4)
-        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.create_note_btn = QPushButton(self.frame_4)
+        self.create_note_btn.setObjectName(u"create_note_btn")
 
-        self.horizontalLayout_2.addWidget(self.pushButton_3)
+        self.horizontalLayout_2.addWidget(self.create_note_btn)
 
-        self.pushButton = QPushButton(self.frame_4)
-        self.pushButton.setObjectName(u"pushButton")
+        self.save_note_btn = QPushButton(self.frame_4)
+        self.save_note_btn.setObjectName(u"save_note_btn")
 
-        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.horizontalLayout_2.addWidget(self.save_note_btn)
 
-        self.pushButton_2 = QPushButton(self.frame_4)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.delete_note_btn = QPushButton(self.frame_4)
+        self.delete_note_btn.setObjectName(u"delete_note_btn")
 
-        self.horizontalLayout_2.addWidget(self.pushButton_2)
+        self.horizontalLayout_2.addWidget(self.delete_note_btn)
 
 
         self.verticalLayout_3.addWidget(self.frame_4)
@@ -142,7 +151,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.label)
 
-        self.teg_list_view = QListView(self.frame_5)
+        self.teg_list_view = QListWidget(self.frame_5)
         self.teg_list_view.setObjectName(u"teg_list_view")
         self.teg_list_view.setMaximumSize(QSize(16777215, 180))
 
@@ -157,10 +166,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.edit_teg_btn = QPushButton(self.teg_actions_frame)
-        self.edit_teg_btn.setObjectName(u"edit_teg_btn")
+        self.add_teg_btn = QPushButton(self.teg_actions_frame)
+        self.add_teg_btn.setObjectName(u"add_teg_btn")
 
-        self.horizontalLayout_3.addWidget(self.edit_teg_btn)
+        self.horizontalLayout_3.addWidget(self.add_teg_btn)
 
         self.save_teg_btn = QPushButton(self.teg_actions_frame)
         self.save_teg_btn.setObjectName(u"save_teg_btn")
@@ -204,11 +213,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Notes</p></body></html>", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Edit", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Save", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.create_note_btn.setText(QCoreApplication.translate("MainWindow", u"Create", None))
+        self.save_note_btn.setText(QCoreApplication.translate("MainWindow", u"Save", None))
+        self.delete_note_btn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Tegs</p></body></html>", None))
-        self.edit_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Edit", None))
+        self.add_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Add", None))
         self.save_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.delete_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.exit_btn.setText(QCoreApplication.translate("MainWindow", u"Close", None))
