@@ -20,6 +20,7 @@ class MyWindow(QtWidgets.QMainWindow):
         self.ui.file_list_view.itemClicked.connect(self.open_note)
         self.ui.create_note_btn.clicked.connect(self.add_note)
         self.ui.delete_note_btn.clicked.connect(self.delete_note)
+        self.ui.save_note_btn.clicked.connect(self.save_note)
 
 
     def set_files(self):
@@ -40,8 +41,15 @@ class MyWindow(QtWidgets.QMainWindow):
         with open(f'./notes/{item}.json', 'r') as opened_file:
             opened_data = json.load(opened_file)
             self.ui.notice_text_edit.setText(opened_data['text'])
+            self.set_tegs(item)
+
+    def set_tegs(self, item):
+        with open(f'./notes/{item}.json', 'r') as opened_file:
+            opened_data = json.load(opened_file)
             for teg in opened_data['tegs']:
+                self.ui.teg_list_view.setAttribute()
                 self.ui.teg_list_view.addItem(teg)
+
 
     def delete_note(self):
         item = self.ui.file_list_view.currentItem().text()
@@ -49,10 +57,23 @@ class MyWindow(QtWidgets.QMainWindow):
         self.set_files()
 
     def save_note(self):
-        pass
+        item = self.ui.file_list_view.currentItem().text()
+        with open(f'./notes/{item}.json', 'w') as opened_file:
+            text = self.ui.notice_text_edit.toPlainText()
+            tegs = []
+            count = self.ui.teg_list_view.count()
+            for x in range(0, count):
+                teg = self.ui.teg_list_view.item(x).text()
+                tegs.append(teg)
+            note_content = {}
+            note_content['name'] = item
+            note_content['text'] = text
+            note_content['tegs'] = tegs
+            json.dump(note_content, opened_file)
+
 
     def add_note(self):
-        note_name, ok = QInputDialog.getText(self, 'Input Dialog', 'Enter note name:')
+        note_name, ok = QInputDialog.getText(self, 'Input note name', 'Enter note name:')
         with open(f'./notes/{note_name}.json', 'w+') as new_file:
             note_content = {}
             note_content['name'] = note_name
@@ -61,6 +82,22 @@ class MyWindow(QtWidgets.QMainWindow):
             json.dump(note_content, new_file)
         self.set_files()
 
+    def create_teg(self):
+        item = self.ui.file_list_view.currentItem().text()
+        teg_name, ok = QInputDialog.getText(self, 'Input teg name', 'Enter teg name:')
+        with open(f'./notes/{item}.json', 'w+') as file:
+            note_content = json.load(file)
+            tegs = []
+            count = self.ui.teg_list_view.count()
+            for x in range(0, count):
+                teg = self.ui.teg_list_view.item(x).text()
+                tegs.append(teg)
+            note_content['tegs'] = tegs
+            json.dump(note_content, file)
+        self.set_tegs(item)
+
+    def teg_save(self):
+        pass
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])

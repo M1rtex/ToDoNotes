@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'untitledzCnTww.ui'
-##
-## Created by: Qt User Interface Compiler version 5.14.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
 
 from PyQt5.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
     QRect, QSize, QUrl, Qt)
@@ -166,10 +157,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.add_teg_btn = QPushButton(self.teg_actions_frame)
-        self.add_teg_btn.setObjectName(u"add_teg_btn")
+        self.create_teg_btn = QPushButton(self.teg_actions_frame)
+        self.create_teg_btn.setObjectName(u"create_teg_btn")
 
-        self.horizontalLayout_3.addWidget(self.add_teg_btn)
+        self.horizontalLayout_3.addWidget(self.create_teg_btn)
 
         self.save_teg_btn = QPushButton(self.teg_actions_frame)
         self.save_teg_btn.setObjectName(u"save_teg_btn")
@@ -213,11 +204,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Notes</p></body></html>", None))
-        self.create_note_btn.setText(QCoreApplication.translate("MainWindow", u"Create", None))
+        self.create_note_btn.setText(QCoreApplication.translate("MainWindow", u"create", None))
         self.save_note_btn.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.delete_note_btn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Tegs</p></body></html>", None))
-        self.add_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Add", None))
+        self.create_teg_btn.setText(QCoreApplication.translate("MainWindow", u"create", None))
         self.save_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.delete_teg_btn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.exit_btn.setText(QCoreApplication.translate("MainWindow", u"Close", None))
